@@ -14,6 +14,7 @@ WIN_WIDTH = 500
 WIN_HEIGHT = 800
 
 GENERATION = 0
+EXPIREMENT_NUMBER = 4
 
 BG_IMG = pygame.transform.scale2x(pygame.image.load(os.path.join("imgs", "bg.png")))
 
@@ -137,7 +138,7 @@ if __name__ == "__main__":
         neat.DefaultReproduction,
         neat.DefaultSpeciesSet,
         neat.DefaultStagnation,
-        "config.txt",
+        f"config{EXPIREMENT_NUMBER}.txt",
     )
 
     p = neat.Population(config)
